@@ -122,6 +122,7 @@ void gcd(int n, int m)
 }
 int main()
 {
+
     gcd(12, 36);
     return 0;
 }
