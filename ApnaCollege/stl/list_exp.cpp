@@ -33,6 +33,8 @@ void displayRating(const list<int> &lst)
 
 void sort_insert(int k, list<int> &l)
 {
+
+    //custom built sort algorithm
     for (auto i = l.begin(); i != l.end(); i++)
     {
         if (*i > k)
