@@ -52,6 +52,7 @@ void recursive_five(int n)
 }
 void recursive_six(int i, int n)
 {
+    // backtracking
     if (i > n)
     {
         return;
@@ -60,8 +61,49 @@ void recursive_six(int i, int n)
     cout << i << endl;
 }
 
+// sum of n numbers by parametric way
+void sum_n(int n, int sum)
+{
+    if (n < 1)
+    {
+        cout << sum << endl;
+        return;
+    }
+    sum_n(n - 1, sum + n);
+}
+
+// sum of n numbers by functional way
+int sum_no(int n)
+{
+    if (n < 0)
+    {
+        return 0;
+    }
+    return n + sum_no(n - 1);
+}
+// factorial of n numbers by parametric method
+void factorial_n(int n, int factorial)
+{
+    if (n < 1)
+    {
+        cout << factorial << endl;
+        return;
+    }
+    factorial_n(n - 1, factorial * n);
+}
+
+// factorial of n numbers by functional methods
+int factorial_no(int n)
+{
+    if (n == 0)
+    {
+        return 1;
+    }
+    return n * factorial_no(n - 1);
+}
 int main()
 {
-    recursive_six(1, 5);
+
+    cout << factorial_no(5) << endl;
     return 0;
 }
