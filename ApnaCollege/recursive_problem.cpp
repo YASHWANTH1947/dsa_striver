@@ -25,14 +25,21 @@ bool check_string_pallindrome(int i, string s)
     }
     return check_string_pallindrome(i + 1, s);
 }
+
+// fibonacii series nth term
+int fibonacci(int n)
+{
+    if (n <= 1)
+    {
+        return n;
+    }
+    int a = fibonacci(n - 1);
+    int b = fibonacci(n - 2);
+    return a + b;
+}
 int main()
 {
-    int arr[5] = {12, 23, 34, 45, 56};
-    reverse_array(0, arr, 5);
-    for (auto k : arr)
-    {
-        cout << k << endl;
-    }
+    cout << fibonacci(5);
 
     return 0;
 }

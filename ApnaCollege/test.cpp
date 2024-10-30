@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 #include <vector>
 using namespace std;
 
@@ -28,11 +29,21 @@ vector<long long> function(long long n)
     }
     return v;
 }
+string alpha(string s)
+{
+    string word = "";
+    for (int i = 0; i < s.size(); i++)
+    {
+        if (isalpha(s[i]))
+        {
+            word += s[i];
+        }
+    }
+    return word;
+}
 int main()
 {
-    for (auto k : function(7))
-    {
-        cout << k << endl;
-    }
+    string word = alpha("A man, a plan, a canal: Panama");
+    cout << word;
     return 0;
 }
