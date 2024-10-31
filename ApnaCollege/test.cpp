@@ -34,7 +34,7 @@ string alpha(string s)
     string word = "";
     for (int i = 0; i < s.size(); i++)
     {
-        if (isalpha(s[i]))
+        if (isalnum(s[i]))
         {
             word += s[i];
         }
