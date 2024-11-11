@@ -28,6 +28,7 @@ void string_hashing_lower(string s, char c)
 }
 void string_hashing_capital(string s, char c)
 {
+    //works for all 255 ascii code characters including numbers and symbols
     int hash[256] = {0};
     for (int i = 0; i < s.size(); i++)
     {
